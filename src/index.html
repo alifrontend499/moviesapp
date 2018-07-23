@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Moviesapp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+  <!-- <link rel="icon" type="icon" href="favicon_icon.ico"> -->
+  <style>
+    .loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .loading img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 250px;
+      }
+  </style>
+</head>
+
+<body>
+  <app-root>
+    <div class="loading">
+      <img src="assets/images/moviesapp.gif" alt="" class="img-responsive">
+    </div>
+  </app-root>
+</body>
+
+</html>

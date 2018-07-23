@@ -1,0 +1,20 @@
+// @import './assets/components/_variables';
+.page-not-found {
+    text-align: center;
+    margin: 50px 0;
+    img {
+        width: 220px;
+        margin: 0 auto;
+    }
+    p {
+        font-size: 50px;
+        text-align: center;
+    }
+    a {
+        background-color: #524364;
+        color: #fff;
+        padding: 6px 20px 7px;
+        font-size: 25px;
+        margin: 20px auto 0;
+    }
+}

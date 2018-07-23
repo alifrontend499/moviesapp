@@ -1,0 +1,22 @@
+.d-flex {
+    @include flexbox;
+}
+
+.d-inline-block {
+    display: inline-block;
+}
+
+.d-block {
+    display: block;
+}
+
+.d-grid {
+    display: grid;
+}
+
+.d-table {
+    display: table;
+}
+.d-none {
+    display: none;
+}

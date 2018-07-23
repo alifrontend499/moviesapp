@@ -1,0 +1,9 @@
+@mixin border($width: 1px, $style: solid, $color: #333) {
+    border: $width $style $color;
+}
+
+@mixin transition($time: .3s) {
+    -webkit-transition: $time;
+    -ms-transition: $time;
+    transition: $time;
+}

@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+
+.border {
+    @include border;
+}
+
+.com-pad-lr {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media screen and (max-width: 767px) {
+    .com-pad-lr {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
+.ul-inline {
+    list-style-type: none;
+    padding: 0;
+    >li {
+        display: inline-block;
+        padding: 0 5px;
+    }
+}
+
+.ul-unstyled {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+button {
+    border-radius: 0;
+    @include border(1px, solid, #ddd);
+    padding: 5px;
+}
+
+.clear-parent:after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.inline-child {
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+}
+
+.img-responsive {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    height: auto;
+}
+
+.primary-color-color {
+    color: $primary-color;
+}
+
+.secondary-color-color {
+    color: $secondary-color;
+}
+
+.primary-color-bg-color {
+    background-color: $primary-color;
+}
+
+.secondary-color-bg-color {
+    background-color: $secondary-color;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+input,
+select,
+textarea {
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 1px solid #ededed;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 5px 10px;
+}

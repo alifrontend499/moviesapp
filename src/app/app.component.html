@@ -1,0 +1,45 @@
+<header class="primary-color-bg-color">
+  <div class="container-fluid">
+    <div class="col xs-12 header com-pad-lr d-flex">
+      <div class="left col xs-2 text-left">
+        <img src="../assets/images/menu-icon.png" alt="" class="d-inline-block" (click)="menu_open($event)">
+        <div class="overlay" (click)="close_menu($event)"></div>
+        <div class="menu">
+          <ul class="ul-unstyled">
+              <li routerLinkActive="active">
+                <a routerLink="home" (click)="close_menu($event)"  class="/home">Home</a>
+              </li>
+              <li routerLinkActive="active">
+                <a (click)="close_menu($event)" routerLink="/aboutme">About me</a>
+              </li>
+              <li routerLinkActive="active">
+                <a (click)="close_menu($event)" >Movies genre</a>
+              </li>
+              <li routerLinkActive="active">
+                <a (click)="close_menu($event)" >Top Movies of 2017</a>
+              </li>
+          </ul>
+        </div>
+      </div>
+      <div class="center col xs-8 text-center">
+        <a routerLink="home">
+          <img [src]="logo" alt="" class="img-responsive d-inline-block">
+        </a>
+      </div>
+      <div class="right col xs-2 text-right">
+        <img src="../assets/images/search-icon.png" alt="" class="d-inline-block" (click)="search_open()">
+        <div class="search secondary-color-bg-color">
+          <form action="#" class="clear-parent">
+            <input type="text" class="col" placeholder="Search..">
+            <button type="submit" class="col">
+              <img src="../assets/images/search-icon.png" alt="">
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="wrapper">
+  <router-outlet></router-outlet>
+</div>
