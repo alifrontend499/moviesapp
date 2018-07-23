@@ -84,7 +84,7 @@ export class AppComponent implements OnInit {
       if (ev.touches[0].pageX >= 0 && ev.touches[0].pageX <= window.innerWidth) {
         sX.innerHTML = ev.touches[0].pageX;
         outerSX = ev.touches[0].pageX
-        if (ev.touches[0].pageX > 100) {
+        if (ev.touches[0].pageX <= 100) {
           menu.style.cssText = "left: -" + outerSX + "%";
         }
       }
