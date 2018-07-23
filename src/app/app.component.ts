@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { QueueScheduler } from 'rxjs/internal/scheduler/QueueScheduler';
 
 @Component({
@@ -6,7 +6,7 @@ import { QueueScheduler } from 'rxjs/internal/scheduler/QueueScheduler';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   // SITE LOGO
   logo: string = "../assets/images/logo.png";
   // OPENS AND CLOSES SEARCH
@@ -58,7 +58,7 @@ export class AppComponent {
     let body = document.querySelector('body');
     let overlay = document.querySelector('.left > .overlay');
     let search = document.querySelector('.right > .search');
-    
+
     body.classList.remove('menu-open');
     if (elem !== null) {
       elem.classList.remove('show');
@@ -69,8 +69,27 @@ export class AppComponent {
     if (overlay !== null) {
       overlay.classList.remove('show');
     }
-    if (search !== null) {    
+    if (search !== null) {
       search.classList.remove('show');
     }
+  }
+  ngOnInit() {
+    let elemX: any = document.querySelector('.screenX span');
+    let elemY: any = document.querySelector('.screenY span');
+    let menu: any = document.querySelector('.menu');
+    let outerSX: number;
+    document.addEventListener('touchmove', (ev) => {
+      let sX: any = document.querySelector('.screenX span');
+
+      if (ev.touches[0].pageX >= 0 && ev.touches[0].pageX <= window.innerWidth) {
+        sX.innerHTML = ev.touches[0].pageX;
+        outerSX = ev.touches[0].pageX
+        if (ev.touches[0].pageX > 100) {
+          menu.style.cssText = "left: -" + outerSX + "%";
+        }
+      }
+
+    });
+
   }
 }
