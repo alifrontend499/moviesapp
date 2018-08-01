@@ -75,25 +75,29 @@ export class AppComponent implements OnInit {
   }
   ngOnInit() {
     let touchpad: any = document.querySelector('.touch');
-    let touchXStart:any;
-    let touchXEnd:any;
-    let touchYStart:any;
-    let touchYEnd:any;
+    let touchXStart: any;
+    let touchXEnd: any;
+    let touchYStart: any;
+    let touchYEnd: any;
     if (touchpad !== null) {
       touchpad.addEventListener('touchstart', (ev) => {
         touchXStart = ev.touches[0].pageX;
+        console.log(touchXStart);
       });
 
       touchpad.addEventListener('touchmove', (ev) => {
-        let touch = ev.touches[0];
-        let diff = touchXStart - touch.pageX;
-        if (diff < 0) {
-          return;
+        let newPos = touchXStart - ev.touches[0].pageX;
+        console.log(newPos);
+        if (newPos > 0) {
+          touchpad.style.cssText = "position: relative; left: -" + newPos + "px";
         }
-        ev.target.style.cssText = "position: relative; left: " + -diff + "px;";
-        console.log();
       });
+      touchpad.addEventListener('touchend', (ev) => {
+        touchXEnd = ev.changedTouches[0].pageX;
+        console.log(ev.changedTouches[0].pageX);
+      });
+
     }
-    
+
   }
 }
