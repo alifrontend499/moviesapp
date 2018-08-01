@@ -84,7 +84,6 @@ export class AppComponent implements OnInit {
         touchXStart = ev.touches[0].pageX;
         console.log(touchXStart);
       });
-
       touchpad.addEventListener('touchmove', (ev) => {
         let newPos = touchXStart - ev.touches[0].pageX;
         console.log(newPos);
@@ -96,8 +95,6 @@ export class AppComponent implements OnInit {
         touchXEnd = ev.changedTouches[0].pageX;
         console.log(ev.changedTouches[0].pageX);
       });
-
     }
-
   }
 }

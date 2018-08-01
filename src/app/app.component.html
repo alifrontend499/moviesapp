@@ -6,18 +6,18 @@
         <div class="overlay" (click)="close_menu($event)"></div>
         <div class="menu">
           <ul class="ul-unstyled">
-              <li routerLinkActive="active">
-                <a routerLink="home" (click)="close_menu($event)"  class="/home">Home</a>
-              </li>
-              <li routerLinkActive="active">
-                <a (click)="close_menu($event)" routerLink="/aboutme">About me</a>
-              </li>
-              <li routerLinkActive="active">
-                <a (click)="close_menu($event)" >Movies genre</a>
-              </li>
-              <li routerLinkActive="active">
-                <a (click)="close_menu($event)" >Top Movies of 2017</a>
-              </li>
+            <li routerLinkActive="active">
+              <a routerLink="home" (click)="close_menu($event)" class="/home">Home</a>
+            </li>
+            <li routerLinkActive="active">
+              <a (click)="close_menu($event)" routerLink="/aboutme">About me</a>
+            </li>
+            <li routerLinkActive="active">
+              <a (click)="close_menu($event)">Movies genre</a>
+            </li>
+            <li routerLinkActive="active">
+              <a (click)="close_menu($event)">Top Movies of 2017</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -45,5 +45,44 @@
 </div>
 
 <div class="touch">
-  
+
 </div>
+
+<table>
+  <tr>
+    <td width="33.3%">1</td>
+    <td width="33.3%">2</td>
+    <td width="33.3%">3</td>
+  </tr>
+  <tr>
+    <td colspan="3">
+      <table>
+        <tr>
+          <td width="" colspan="50%">1</td>
+          <td width="" colspan="50%">2</td>
+        </tr>
+        <tr>
+          <td colspan="33.3%">1</td>
+          <td colspan="33.3%">2</td>
+          <td colspan="33.3%">3</td>
+          <!-- <td colspan="2" style="border: none;padding: 0;">
+            <table class="" style="width: calc(100% + 1px);">
+              <tr>
+                <td width="33.3%" style="border-top: none;">1</td>
+                <td width="33.3%" style="border-top: none;">2</td>
+                <td width="33.3%" style="border-top: none;">3</td>
+              </tr>
+            </table>
+          </td> -->
+        </tr>
+      </table>
+      <table style="margin-top: 10px;">
+        <tr>
+          <td width="100%">
+            1
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
